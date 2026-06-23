@@ -1,5 +1,7 @@
 class Solution:
     def peakIndexInMountainArray(self, arr: List[int]) -> int:
-        b=max(arr)
-        return arr.index(b)
+        l=max(arr)
+        for i in range(len(arr)):
+            if l==arr[i]:
+                return i
         
