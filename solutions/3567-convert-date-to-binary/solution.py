@@ -1,8 +1,12 @@
 class Solution:
     def convertDateToBinary(self, date: str) -> str:
-        b=date.split("-")
-        for i in range(len(b)):
-                b[i]=bin(int(b[i]))[2:]
-
+        l=[int(i) for i in date.split("-")]
+        b=[]
+        for i in l:
+            o=bin(i)[2:]
+            b.append(o)
+        
         return "-".join(b)
+
+
         
