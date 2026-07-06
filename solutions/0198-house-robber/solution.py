@@ -1,11 +1,13 @@
 class Solution:
-    def rob(self, nums: List[int]) -> int:
+    def rob(self, n: List[int]) -> int:
         l=0
         m=0
-        for i in range(len(nums)):
-            if(i%2==0):
-                l=max(l+nums[i],m)
-            else:
-                m=max(m+nums[i],l)
+        k=0
+        for i in n:
+            l=i+m
+            m=k
+            k=max(k,l)
+
+
+        return k
         
-        return max(l,m)
