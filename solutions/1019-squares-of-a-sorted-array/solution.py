@@ -2,7 +2,7 @@ class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
         p=[]
         for i in nums:
-            p.append(pow(i,2))
+            p.append(pow(abs(i),2))
         
         p.sort()
         return p
